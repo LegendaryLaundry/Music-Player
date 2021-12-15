@@ -28,7 +28,7 @@ function App() {
         return currentSongIndex + 1;
       }
     });
-  });
+  }, [currentSongIndex, songs.length]);
 
   return (
     <div className="App">
