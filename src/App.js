@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Player from "./components/Player";
+import Player from './components/Player'
 function App() {
   const [songs] = useState([
     {
@@ -7,10 +7,6 @@ function App() {
       artist: "Mega Man Zero 4",
       img_src: "./images/megamanZero4AlbumCover.jpg",
       src: "./music/Holy-Land.mp3"
-      // title: "Change Your Way",
-      // artist: "Elisha La'Verne",
-      // img_src:"./images/innocentsinAlbumCover.jpg",
-      // src: "./music/Change-Your-Way.mp3"
     },
     {
        title: "Change Your Way",
@@ -19,7 +15,7 @@ function App() {
        src: "./music/Change-Your-Way.mp3"
 
     }
-  ])
+  ]);
 
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [nextSongIndex, setNextSongIndex] = useState(0);
@@ -32,7 +28,7 @@ function App() {
         return currentSongIndex + 1;
       }
     });
-  });
+  }, [currentSongIndex]);
 
   return (
     <div className="App">
